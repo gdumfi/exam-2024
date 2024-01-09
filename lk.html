@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LK</title>
+<script src="lk.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link rel="stylesheet" href="body-style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid row-2">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="true" aria-label="Переключить навигацию">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <aside class="navbar-nav me-auto mb-5 mb-md-7">
+
+            <div class="linklk">
+              <a href="Main.html">Главная страница</a>
+            </div>
+            
+            <div id="image">
+              <img src="Image/icon.png" width=10% height=20%>
+            </div>
+
+            <div id="navelemes">
+              <h1>Eco Tour</h1>
+              <p>Экскурсии по Москве</p>
+            </div>
+
+            
+            
+          </aside>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+  <aside>
+
+    <div class="alerts-person w-75 mx-auto py-2">
+      <div class="d-none alert alert-warning alert-dismissible" role="alert"></div>
+    </div>
+
+    <div class="container">
+      <div class="col row-cols-12 row-cols-sm-1 row-cols-lg-1.5 p-4">
+        <article class="col">
+          <aside class="col-2 col-md-12 col-lg-1.5">
+          </aside>
+          <main class="col">
+            <aside>
+              <h2>Оставленные заявки </h2>
+              <!--здесь должна быть таблица-->
+
+              <div class="bg-light overflow-x-scroll w-100">
+                <table class="table w-100">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Название маршрута</th>
+                      <th scope="col">Дата</th>
+                      <th scope="col">Стоимость</th>
+                      <th scope="col">Инструменты</th>
+                    </tr>
+                  </thead>
+                  <tbody class="list-applications">
+                    <tr class="exaple-applications d-none" data-id="">
+                      <th scope="row">1</th>
+                      <td>test</td>
+                      <td>test</td>
+                      <td>test</td>
+                      <td>
+                          <i class="fa fa-eye fa-1x mx-1" aria-hidden="true"></i>
+                          <i class="fa fa-pencil fa-1x mx-1" aria-hidden="true"></i>
+                          <i class="fa fa-trash fa-1x mx-1" aria-hidden="true"></i>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="d-flex py-3 justify-content-center">
+                <div class="pagination">
+                  <button class="btn first-page-btn" data-page="0-applications">Первая страница</button>
+                  <div class="pages-btn">
+                    <button class="btn" data-page="1-applications">1</button>
+                    <button class="btn" data-page="2-applications">2</button>
+                    <button class="btn" data-page="3-applications">3</button>
+                    <button class="btn" data-page="4-applications">4</button>
+                    <button class="btn" data-page="5-applications">5</button>
+                  </div>
+                  <button class="btn last-page-btn" data-page="6-applications">Последняя страница</button>
+                </div>
+              </div>
+
+            </aside>
+          </main>
+        </article>
+      </div>
+    </div>
+  </aside>
+  </main>
+
+  <footer class="footer fixed-bottom py-3 bg-dark">
+    <div class="container1">
+      <p> Copyright 2023 © EcoTour All Rights Reserved.</p>
+      <p> Контактнй телефон: 88005553535</p>
+    </div>
+  </footer>
+
+  <div class="modal fade modal-make-an-application" id="makeAnApplication" tabindex="-1" aria-labelledby="makeAnApplication" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 modal-label" id="modal-label">Оформление заявки</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="py-1 modal-make-FIO">ФИО гида: </div>
+              <div class="py-1 modal-make-name-route">Название маршрута: </div>
+                <div class="d-flex flex-row flex-wrap py-1">
+                  <div class="px-2 py-1">
+                    <div>Дата экскурсии:</div>
+                    <input type="date" class="modal-date">
+                  </div>
+                  <div class="px-2 py-1">
+                    <div>Время начала:</div>
+                    <input type="time" class="modal-time">
+                  </div>
+                  <div class="px-2 py-1">
+                    <div>Длительность экскурсии:</div>
+                      <select class="form-select modal-select-time">
+                        <option selected value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                    </div>
+                    <div class="px-2 py-1">
+                      <div>Количество человек:</div>
+                        <input type="number" class="modal-number-people" min="1" max="20">
+                      </div>
+                    </div>
+                    <div class="py-1">Дополнительные опции:</div>
+                    <div class="form-check form-check-inline">
+                      <div class="py-1">
+                        <input class="form-check-input modal-first-additional-option" type="checkbox" value="" id="firstAdditionalOption">
+                        <label class="form-check-label" for="firstAdditionalOption">Легкие закуски и горячие напитки во время экскурсии.</label>
+                        <div>Увеличивают стоимость на 1000 рублей за каждого посетителя.</div>
+                        <div class="view-first-addition"></div>
+                      </div>
+                      <div class="py-1">
+                        <input class="form-check-input modal-second-additional-option" type="checkbox" value="" id="secondAdditionalOption">
+                        <label class="form-check-label" for="secondAdditionalOption">Тематические сувениры для посетителей.</label>
+                        <div> Стоимость увеличивается на 500 рублей для
+                          каждого посетителя.</div>
+                        <div class="view-second-addition"></div>
+                      </div>
+                </div>
+                <div class="modal-price py-3">Итоговая стоимость:</div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn modal-btn-close" data-bs-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn modal-btn-save">Сохранить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="deleteModallLabel">Удаление заявки</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" data-bs-dismiss="modal">Отмена</button>
+          <button type="button" class="btn btn-delete-modal">Удалить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
